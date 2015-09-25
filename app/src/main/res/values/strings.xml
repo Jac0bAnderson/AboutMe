@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">About Me</string>
+
+    <string name="AboutMe">Find Out About ME</string>
+    <string name="action_settings">Settings</string>
+    <string name="gametext">in my free time I like to play games.  I like to play games on steam and on the ps4.</string>
+    <string name="musictext">In my free time, and when I’m doing work I like to listen to music. My favorite music artists are Nine Inch Nails, My Chemical Romance, and Cage the Elephant.</string>
+    <string name="NextButton">Next</string>
+</resources>
