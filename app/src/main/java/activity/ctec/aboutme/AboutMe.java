@@ -65,6 +65,7 @@ public class AboutMe extends AppCompatActivity
 
     private void changeVisibility()
     {
+        //Gametext visible settings
         if (gamesText.getVisibility() == View.VISIBLE)
         {
              gamesText.setVisibility(View.GONE);
@@ -73,6 +74,20 @@ public class AboutMe extends AppCompatActivity
         {
             gamesText.setVisibility(View.VISIBLE);
         }
+
+        //MusicText visible settings
+        if (musicText.getVisibility() == View.VISIBLE)
+        {
+            musicText.setVisibility( View.GONE);
+        }
+        else
+        {
+            musicText.setVisibility(View.VISIBLE);
+        }
+
+
+
+
 
     }
         //listeners
@@ -88,7 +103,27 @@ public class AboutMe extends AppCompatActivity
 
         });
 
+        Music.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View musicText)
+            {
+                changeVisibility();
+            }
+
+        });
+
+
+
+
+
+
+
     }
+
+
+
+
+
 
 
 
