@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
-
+import android.content.Intent;
 public class SwimmingAndShows extends AppCompatActivity
 {
     //declarations
@@ -97,13 +97,18 @@ public class SwimmingAndShows extends AppCompatActivity
 
         });
 
-        MovieButton.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View MovieText)
-            {
+        MovieButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View MovieText) {
                 changeVisibilityMovie();
             }
 
+        });
+        nextPage2.setOnClickListener(new View.onClickListener()
+        {
+            public void onClick(View buttonView) {
+                Intent changeScreen = new Intent(buttonView.getContext(), AboutMe.class);
+                startActivityForResult(changeScreen, 0);
+            }
         });
 
 
