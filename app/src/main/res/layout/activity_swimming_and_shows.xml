@@ -23,4 +23,49 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AboutMe"
+        android:id="@+id/SwimmingButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AboutMe"
+        android:id="@+id/button2"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/pciture"
+        android:layout_alignRight="@+id/SwimmingButton"
+        android:layout_alignEnd="@+id/SwimmingButton"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/swimmingtext"
+        android:id="@+id/SwimmingText"
+        android:layout_below="@+id/SwimmingButton"
+        android:layout_toRightOf="@+id/pciture"
+        android:layout_alignRight="@+id/SwimmingButton"
+        android:layout_alignEnd="@+id/SwimmingButton"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/movietext"
+        android:id="@+id/MovieText"
+        android:layout_toRightOf="@+id/pciture"
+        android:layout_below="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:visibility="invisible"/>
 </RelativeLayout>

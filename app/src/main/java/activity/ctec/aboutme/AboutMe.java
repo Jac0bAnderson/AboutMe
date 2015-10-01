@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
-
+import android.content.Intent;
 
 public class AboutMe extends AppCompatActivity
 {
@@ -31,6 +31,8 @@ public class AboutMe extends AppCompatActivity
 
         Music = (Button)findViewById(R.id.Music);
         musicText =(TextView)findViewById(R.id.MusicText);
+
+
 
         nextPage1 = (Button)findViewById(R.id.NextPage1);
 
@@ -66,6 +68,7 @@ public class AboutMe extends AppCompatActivity
     private void changeVisibility()
     {
         //Gametext visible settings
+
         if (gamesText.getVisibility() == View.VISIBLE)
         {
              gamesText.setVisibility(View.GONE);
@@ -75,21 +78,21 @@ public class AboutMe extends AppCompatActivity
             gamesText.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    private void changeVisibilityMusic()
+    {
         //MusicText visible settings
         if (musicText.getVisibility() == View.VISIBLE)
         {
-            musicText.setVisibility( View.GONE);
-        }
-        else
-        {
+            musicText.setVisibility(View.GONE);
+        } else {
             musicText.setVisibility(View.VISIBLE);
         }
-
-
-
-
-
     }
+
+
+
         //listeners
     private void setUpListeners()
     {
@@ -107,30 +110,20 @@ public class AboutMe extends AppCompatActivity
         {
             public void onClick(View musicText)
             {
-                changeVisibility();
+                changeVisibilityMusic();
             }
 
         });
 
-
-
-
-
-
+        nextPage1.setOnClickListener(new View.onClickListener()
+        {
+            public void onClick(View buttonView)
+            {
+                Intent changeScreen = new Intent(buttonView.getContext(), SwimmingAndShows.class);
+                startActivityForResult(changeScreen,0);
+            }
+        });
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

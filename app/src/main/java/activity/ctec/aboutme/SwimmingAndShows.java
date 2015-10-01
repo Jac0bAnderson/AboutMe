@@ -5,15 +5,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-//import android.view.View;
-
+import android.view.View;
+import android.widget.TextView;
 
 public class SwimmingAndShows extends AppCompatActivity
 {
     //declarations
 
     private Button nextPage2;
-
+    private Button SwimmingButton;
+    private Button MovieButton;
+    private TextView SwimmingText;
+    private TextView MovieText;
 
 
 
@@ -24,7 +27,7 @@ public class SwimmingAndShows extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swimming_and_shows);
         //initialization
-        //setUpListeners();
+        setUpListeners();
 
     }
 
@@ -52,10 +55,64 @@ public class SwimmingAndShows extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-   // private void setUpListeners()
-    //{
-      //  nextPage2(new View.OnClickListener()
-   // }
+
+    private void changeVisibilitySwimming()
+    {
+        //Swimmingtext visible settings
+
+        if (SwimmingText.getVisibility() == View.VISIBLE)
+        {
+            SwimmingText.setVisibility(View.GONE);
+        }
+        else
+        {
+            SwimmingText.setVisibility(View.VISIBLE);
+        }
+
+    }
+
+    private void changeVisibilityMovie()
+    {
+        //MusicText visible settings
+        if (MovieText.getVisibility() == View.VISIBLE)
+        {
+            MovieText.setVisibility(View.GONE);
+        } else {
+            MovieText.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+
+    //listeners
+    private void setUpListeners()
+    {
+
+        SwimmingButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View SwimmingText)
+            {
+                changeVisibilitySwimming();
+            }
+
+        });
+
+        MovieButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View MovieText)
+            {
+                changeVisibilityMovie();
+            }
+
+        });
+
+
+
+    }
+
+
+
+
 
 
 }
