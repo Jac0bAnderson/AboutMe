@@ -115,15 +115,13 @@ public class AboutMe extends AppCompatActivity
 
         });
 
-       nextPage1.setOnClickListener(new View.OnClickListener()
-       {
-           public void onClick(View buttonView)
-           {
-               Intent returnIntent = new Intent();
-               setResult(RESULT_OK, returnIntent);
-               finish();
-           }
-       });
+        nextPage1.setOnClickListener(new View.onClickListener()
+        {
+            public void onClick(View buttonView) {
+                Intent changeScreen = new Intent(buttonView.getContext(), AboutMe.class);
+                startActivityForResult(changeScreen, 0);
+            }
+        });
 
     }
 
