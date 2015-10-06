@@ -10,8 +10,8 @@ import android.view.View;
 import android.content.Intent;
 
 
-public class AboutMe extends AppCompatActivity
-{
+
+public class AboutMe extends AppCompatActivity {
 //declaration
 
     private Button Games;
@@ -21,71 +21,62 @@ public class AboutMe extends AppCompatActivity
     private TextView musicText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
         // initialization- (name) =(type) findViewById(R.id."idName");
 
-        Games = (Button)findViewById(R.id.Games);
-        gamesText =(TextView)findViewById(R.id.GamesText);
+        Games = (Button) findViewById(R.id.Games);
+        gamesText = (TextView) findViewById(R.id.GamesText);
 
-        Music = (Button)findViewById(R.id.Music);
-        musicText =(TextView)findViewById(R.id.MusicText);
+        Music = (Button) findViewById(R.id.Music);
+        musicText = (TextView) findViewById(R.id.MusicText);
 
 
-
-        nextPage1 = (Button)findViewById(R.id.NextPage1);
+        nextPage1 = (Button) findViewById(R.id.NextPage1);
 
 
         setUpListeners();
+
     }
 
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_about_me, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings)
-        {
+        if (id == R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private void changeVisibility()
-    {
+    private void changeVisibility() {
         //Gametext visible settings
 
-        if (gamesText.getVisibility() == View.VISIBLE)
-        {
-             gamesText.setVisibility(View.GONE);
-        }
-        else
-        {
+        if (gamesText.getVisibility() == View.VISIBLE) {
+            gamesText.setVisibility(View.GONE);
+        } else {
             gamesText.setVisibility(View.VISIBLE);
         }
 
     }
 
-    private void changeVisibilityMusic()
-    {
+    private void changeVisibilityMusic() {
         //MusicText visible settings
-        if (musicText.getVisibility() == View.VISIBLE)
-        {
+        if (musicText.getVisibility() == View.VISIBLE) {
             musicText.setVisibility(View.GONE);
         } else {
             musicText.setVisibility(View.VISIBLE);
@@ -93,19 +84,31 @@ public class AboutMe extends AppCompatActivity
     }
 
 
-        //listeners
+    private void setUpListeners() {
+
+        Games.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View GamesText) {
+                changeVisibility();
+            }
+        });
+        Music.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View MusicText) {
+                changeVisibilityMusic();
+            }
+        });
 
 
-    nextPage1.setOnClickListener(new View.OnClickListener()
-    {
-        public void onClick(View buttonView) {
-            Intent returnIntent = new Intent();
-            setResult(RESULT_OK, returnIntent);
-            finish();
-        }
-    });
-    
+        nextPage1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View buttonView)
+            {
+                Intent returnIntent = new Intent();
+                setResult(RESULT_OK, returnIntent);
+                finish();
+            }
+        });
 
+
+    }
 }
 
 
@@ -113,4 +116,4 @@ public class AboutMe extends AppCompatActivity
 
 
 
-}
+
