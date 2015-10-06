@@ -84,43 +84,25 @@ public class SwimmingAndShows extends AppCompatActivity
 
 
 
-    //listeners
-    private void setUpListeners()
-    {
-
-        SwimmingButton.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View SwimmingText)
-            {
+    private void setUpListeners() {
+        SwimmingText.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View gamesText) {
                 changeVisibilitySwimming();
             }
-
         });
-
-        MovieButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View MovieText) {
+        MovieText.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View musicText) {
                 changeVisibilityMovie();
             }
-
         });
-
-        nextPage2.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View buttonView)
-            {
-                Intent returnIntent = new Intent();
-                setResult(RESULT_OK, returnIntent);
-                finish();
+        nextPage2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View buttonView) {
+                Intent changeScreen = new Intent(buttonView.getContext(), AboutMe.class);
+                startActivityForResult(changeScreen, 2);
             }
         });
-
 
 
     }
-
-
-
-
-
 
 }

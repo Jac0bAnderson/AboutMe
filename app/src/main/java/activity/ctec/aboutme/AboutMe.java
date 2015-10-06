@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.content.Intent;
 
+
 public class AboutMe extends AppCompatActivity
 {
 //declaration
@@ -92,37 +93,24 @@ public class AboutMe extends AppCompatActivity
     }
 
 
-
         //listeners
-    private void setUpListeners()
+
+
+    nextPage1.setOnClickListener(new View.OnClickListener()
     {
+        public void onClick(View buttonView) {
+            Intent returnIntent = new Intent();
+            setResult(RESULT_OK, returnIntent);
+            finish();
+        }
+    });
+    
 
-        Games.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View gamesText)
-            {
-                changeVisibility();
-            }
+}
 
-        });
 
-        Music.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View musicText)
-            {
-                changeVisibilityMusic();
-            }
 
-        });
 
-        nextPage1.setOnClickListener(new View.onClickListener()
-        {
-            public void onClick(View buttonView) {
-                Intent changeScreen = new Intent(buttonView.getContext(), AboutMe.class);
-                startActivityForResult(changeScreen, 0);
-            }
-        });
 
-    }
 
 }
