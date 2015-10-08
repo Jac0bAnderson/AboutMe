@@ -9,4 +9,10 @@
     <string name="title_activity_swimming_and_shows">Swimming and Shows</string>
     <string name="swimmingtext">I like to swim competitively in the summer, and during the school year. In the summer I swim for the Life Center team, and in the school year I swim for the Alta team.  </string>
     <string name="movietext">In my free time I like to watch movies and T.V. My favorite shows is Breaking bad.  My favorite movie is Monster Inc.</string>
+    <string name="title_activity_reading">Reading</string>
+    <string name="home">Home</string>
+    <string name="BookText">In my spare time I like to read. I usually read articles online from news stories to new technology.  I also like to read books; my favorite series is the Percy Jackson series.</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_books_and_stuff">Books And Stuff</string>
 </resources>
