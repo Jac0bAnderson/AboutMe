@@ -68,6 +68,15 @@ public class SwimmingAndShows extends AppCompatActivity
         {
             SwimmingText.setVisibility(View.VISIBLE);
         }
+        //swimmingPic
+        if (swimmingPic.getVisibility() == View.VISIBLE)
+        {
+            swimmingPic.setVisibility(View.GONE);
+        }
+        else
+        {
+            swimmingPic.setVisibility(View.VISIBLE);
+        }
 
     }
 
@@ -79,6 +88,13 @@ public class SwimmingAndShows extends AppCompatActivity
             MovieText.setVisibility(View.GONE);
         } else {
             MovieText.setVisibility(View.VISIBLE);
+        }
+        //moviePic visible settings
+        if (moviePic.getVisibility() == View.VISIBLE)
+        {
+            moviePic.setVisibility(View.GONE);
+        } else {
+            moviePic.setVisibility(View.VISIBLE);
         }
     }
 

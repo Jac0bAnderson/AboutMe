@@ -68,8 +68,18 @@ public class AboutMe extends AppCompatActivity {
 
         if (gamesText.getVisibility() == View.VISIBLE) {
             gamesText.setVisibility(View.GONE);
+
+
         } else {
             gamesText.setVisibility(View.VISIBLE);
+        }
+        //gamePic visible settings
+        if (gamesPic.getVisibility() == View.VISIBLE) {
+            gamesPic.setVisibility(View.GONE);
+
+
+        } else {
+            gamesPic.setVisibility(View.VISIBLE);
         }
 
     }
@@ -78,9 +88,18 @@ public class AboutMe extends AppCompatActivity {
         //MusicText visible settings
         if (musicText.getVisibility() == View.VISIBLE) {
             musicText.setVisibility(View.GONE);
+
         } else {
             musicText.setVisibility(View.VISIBLE);
         }
+            //musicPic visible settings
+        if (musicPic.getVisibility() == View.VISIBLE) {
+            musicPic.setVisibility(View.GONE);
+
+        } else {
+            musicPic.setVisibility(View.VISIBLE);
+        }
+
     }
 
 
