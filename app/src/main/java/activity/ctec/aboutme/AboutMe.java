@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
 import android.content.Intent;
+import android.widget.ImageView;
 
 
 
@@ -19,6 +20,9 @@ public class AboutMe extends AppCompatActivity {
     private Button nextPage1;
     private TextView gamesText;
     private TextView musicText;
+    private ImageView gamesPic;
+    private ImageView musicPic;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +32,11 @@ public class AboutMe extends AppCompatActivity {
 
         Games = (Button) findViewById(R.id.Games);
         gamesText = (TextView) findViewById(R.id.GamesText);
+        gamesPic =(ImageView) findViewById(R.id.gamesPic);
 
         Music = (Button) findViewById(R.id.Music);
         musicText = (TextView) findViewById(R.id.MusicText);
+        musicPic =(ImageView) findViewById(R.id.musicPic);
 
 
         nextPage1 = (Button) findViewById(R.id.NextPage1);

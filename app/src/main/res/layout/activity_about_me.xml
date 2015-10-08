@@ -64,4 +64,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gamesPic"
+        android:src="@drawable/steampicforapp"
+        android:layout_below="@+id/GamesText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/Music"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/musicPic"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/MusicText"
+        android:layout_alignEnd="@+id/MusicText"
+        android:layout_marginRight="84dp"
+        android:layout_marginEnd="84dp"
+        android:src="@drawable/ninaboutme"/>
+
 </RelativeLayout>

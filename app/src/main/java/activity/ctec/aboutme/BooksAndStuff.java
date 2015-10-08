@@ -8,17 +8,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ImageView;
 public class BooksAndStuff extends AppCompatActivity {
 
     private Button homeButton;
     private Button bookButton;
     private TextView bookText;
+    private ImageView bookPic;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books_and_stuff);
+
+        bookButton = (Button) findViewById(R.id.bookButton);
+        bookText = (TextView) findViewById(R.id.bookText);
+
+        homeButton =(Button) findViewById(R.id.homeButton);
+        bookPic =(ImageView) findViewById(R.id.bookPic);
+
+        setUpListeners();
     }
 
     @Override
@@ -69,7 +79,7 @@ public class BooksAndStuff extends AppCompatActivity {
 
     private void setUpListeners() {
 
-        book.setOnClickListener(new View.OnClickListener() {
+        bookButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View GamesText) {
                 changeVisibility();
             }

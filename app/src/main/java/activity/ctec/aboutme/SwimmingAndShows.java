@@ -8,15 +8,18 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
+import android.widget.ImageView;
 public class SwimmingAndShows extends AppCompatActivity
 {
     //declarations
 
     private Button nextPage2;
-    private Button SwimmingButton;
-    private Button MovieButton;
-    private TextView SwimmingText;
-    private TextView MovieText;
+    private Button swimmingButton;
+    private Button movieButton;
+    private TextView swimmingText;
+    private TextView movieText;
+    private ImageView swimmingPic;
+    private ImageView moviePic;
 
 
 
@@ -27,6 +30,16 @@ public class SwimmingAndShows extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swimming_and_shows);
         //initialization
+
+        nextPage2 = (Button) findViewById(R.id.nextPage2);
+        swimmingButton = (Button) findViewById(R.id.swimmingButton);
+        movieButton=(Button) findViewById(R.id.movieButton);
+        swimmingText=(TextView) findViewById(R.id.swimmingText);
+        movieText=(TextView) findViewById(R.id.movieText);
+        swimmingPic=(ImageView) findViewById(R.id.swimmingPic);
+        moviePic=(ImageView) findViewById(R.id.moviePic);
+
+
         setUpListeners();
 
     }
@@ -60,13 +73,13 @@ public class SwimmingAndShows extends AppCompatActivity
     {
         //Swimmingtext visible settings
 
-        if (SwimmingText.getVisibility() == View.VISIBLE)
+        if (swimmingText.getVisibility() == View.VISIBLE)
         {
-            SwimmingText.setVisibility(View.GONE);
+            swimmingText.setVisibility(View.GONE);
         }
         else
         {
-            SwimmingText.setVisibility(View.VISIBLE);
+            swimmingText.setVisibility(View.VISIBLE);
         }
         //swimmingPic
         if (swimmingPic.getVisibility() == View.VISIBLE)
@@ -83,11 +96,11 @@ public class SwimmingAndShows extends AppCompatActivity
     private void changeVisibilityMovie()
     {
         //MusicText visible settings
-        if (MovieText.getVisibility() == View.VISIBLE)
+        if (movieText.getVisibility() == View.VISIBLE)
         {
-            MovieText.setVisibility(View.GONE);
+            movieText.setVisibility(View.GONE);
         } else {
-            MovieText.setVisibility(View.VISIBLE);
+            movieText.setVisibility(View.VISIBLE);
         }
         //moviePic visible settings
         if (moviePic.getVisibility() == View.VISIBLE)
@@ -101,12 +114,12 @@ public class SwimmingAndShows extends AppCompatActivity
 
 
     private void setUpListeners() {
-        SwimmingButton.setOnClickListener(new View.OnClickListener() {
+        swimmingButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View SwimmingText) {
                 changeVisibilitySwimming();
             }
         });
-        MovieButton.setOnClickListener(new View.OnClickListener() {
+        movieButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View MovieText) {
                 changeVisibilityMovie();
             }
